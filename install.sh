@@ -1,6 +1,6 @@
 #!/bin/bash
 # 下载地址
-DOWNLOAD_URL="https://github.com/bqlpfy/flux-panel/releases/download/gost-latest/gost"
+DOWNLOAD_URL="https://github.com/ChaterV/flux-panel/releases/download/gost-latest/gost"
 INSTALL_DIR="/etc/gost"
 COUNTRY=$(curl -s https://ipinfo.io/country)
 if [ "$COUNTRY" = "CN" ]; then
@@ -231,7 +231,7 @@ update_gost() {
   fi
   
   echo "📥 使用下载地址: $DOWNLOAD_URL"
-  
+
   # 检查并安装 tcpkill
   check_and_install_tcpkill
   
@@ -259,7 +259,7 @@ update_gost() {
   # 重启服务
   echo "🔄 重启服务..."
   systemctl start gost
-  
+
   echo "✅ 更新完成，服务已重新启动。"
 }
 
